@@ -53,9 +53,9 @@ define(function(require,exports) {//dedine闭包
 	}
 
 	exports.xc=function(){
-		fun.selectDraw($("#ss-ssl select"),Data.dromData,function(vaule,uid){});
-		fun.selectDraw($("#ss-lc select"),Data.dromlData,function(vaule,uid){});
-		fun.selectDraw($("#ss-ssh select"),Data.dromnData,function(vaule,uid){});
+		fun.selectDraw($("#ss-ssl select"),Data.dromData2,function(vaule,uid){});
+		fun.selectDraw($("#ss-lc select"),Data.dromlData2,function(vaule,uid){});
+		fun.selectDraw($("#ss-ssh select"),Data.dromnData2,function(vaule,uid){});
 		$("#jftxt").click(function(){//内容弹窗按钮
 			$("#jctxtChoose").addClass("open");
 			$(".qkyh5_header,.qkyh5_main,.qkyh5_footbg").addClass("blur");
@@ -104,14 +104,18 @@ define(function(require,exports) {//dedine闭包
 	}
 	//初始化渲染当天的前天后天三天数据
 	function pageDraw(data,date){
+		var prevD=fun.comp_date(date,false);
+		var nextD=fun.comp_date(date,true);
+
 		$(".ss-pages").html("");//清空（为了日历输入框直接输入时，避免跟旧数据重叠造成混乱）
-		$(".ss-pages").append(liAdd(fun.comp_date(date,false)));
+		$(".ss-pages").append(liAdd(prevD));
 		$(".ss-pages").append(liAdd(date));
-		$(".ss-pages").append(liAdd(fun.comp_date(date,true)));
-		checkData_join(data[fun.comp_date(date,false)],fun.comp_date(date,false));
+		$(".ss-pages").append(liAdd(nextD));
+		checkData_join(data[prevD],prevD);
 		checkData_join(data[date],date);
-		checkData_join(data[fun.comp_date(date,true)],fun.comp_date(date,true));
+		checkData_join(data[nextD],nextD);
 		$(".ss-pages .ss-pagesli[date='"+date+"']").addClass("open");
+		$(".ss-pages .ss-pagesli[date='"+nextD+"']").addClass("rightyc");
 	}
 	//数据判断和加入二级内容
 	function checkData_join(data,date){
@@ -129,15 +133,16 @@ define(function(require,exports) {//dedine闭包
 		var nextDate=fun.comp_date(inputDate,true);
 		var thiss=$(".ss-pages .ss-pagesli").length;
 		var activeIndex=$(".ss-pages .ss-pagesli[date='"+inputDate+"']").index();
-		$(".ss-pages .ss-pagesli").removeClass("open").removeClass("rightyc");
+		$(".ss-pages .ss-pagesli").removeClass("open");
 		if(type=="prev"){
 			$("#pbDate").val(prevDate);
 			if(activeIndex<=0){ $(".ss-pages").prepend(liAdd(prevDate)); checkData_join(Data.pbtjData[prevDate],prevDate);}
+			$(".ss-pages .ss-pagesli[date='"+inputDate+"']").addClass("rightyc");
 			$(".ss-pages .ss-pagesli[date='"+prevDate+"']").addClass("open");
 		}else{
-			$(".ss-pages .ss-pagesli").addClass("rightyc");
 			$("#pbDate").val(nextDate);
 			if(activeIndex>=(thiss-1)){ $(".ss-pages").append(liAdd(nextDate)); checkData_join(Data.pbtjData[nextDate],nextDate); }
+			$(".ss-pages .ss-pagesli[date='"+inputDate+"']").removeClass("rightyc");
 			$(".ss-pages .ss-pagesli[date='"+nextDate+"']").addClass("open");
 		}
 	}

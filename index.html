@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>宿舍管理</title>
+    <link href="css/HFive.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper-3.3.1.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/ssgl.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="qkybody">
+    <!--头部标准，一般固定-->
+    <div class="qkyh5_header noshadow ub ub-ac ba_fa heard_">
+        <a class="home_but"><i class="qkyicon">&#xe6a7;</i></a>
+        <div class="date-but left"><i class="qkyicon">&#xe67e;</i></div>
+        <div class="ub-f1"><div class="input-date"><input type="date" id="pbDate"></div></div>
+        <div class="date-but right mr10"><i class="qkyicon">&#xe67d;</i></div>
+        
+    </div>
+
+    <!--中部标准，一般放列表-->
+    <div class="qkyh5_main pt50">
+        <div class="but-bar ub ub-ac">
+            <a class="but lt ub-f1 active" toshow="class-tj">班级统计</a>
+            <a class="but lt ub-f1" toshow="drom-tj">宿舍统计</a>
+        </div>
+        <div class="sel-bar ub ub-ac" selid="class-tj">
+            <div>筛选</div>
+            <div class="ub-f1 ml10"><div class="selectbox" id="ss-group"><select class="select"></select></div></div>
+            <div class="ub-f1 ml10"><div class="selectbox" id="ss-class"><select class="select"></select></div></div>
+        </div>
+        <div class="sel-bar ub-ac" selid="drom-tj">
+                <div>筛选</div>
+                <div class="ub-f1 ml10"><div class="selectbox" id="ss-ssl"><select class="select"></select></div></div>
+                <div class="ub-f1 ml10"><div class="selectbox" id="ss-lc"><select class="select"></select></div></div>
+                <div class="ub-f1 ml10"><div class="selectbox" id="ss-ssh"><select class="select"></select></div></div>
+        </div>
+        
+        <div class="ss-pages"></div>
+
+
+        <div class="yc" id="huancun">
+            <div class="ss-page open class-tj" pageid="class-tj">
+                <table class="ss-table">
+                    <thead><tr><th>排名</th><th>班级</th><th>得分</th><th>班主任</th><th width="20%">详情</th></tr></thead>
+                    <tbody class="ss-class-tbody">
+                        <tr><td>1</td><td>高一（1）班</td><td>102分</td><td>黄老师</td><td><a class="but toinfo">详情</a></td></tr>
+                        <tr><td>2</td><td>高一（1）班</td><td>102分</td><td>黄老师</td><td><a class="but toinfo">详情</a></td></tr>
+                        <tr><td>3</td><td>高一（1）班</td><td>102分</td><td>黄老师</td><td><a class="but toinfo">详情</a></td></tr>
+                        <tr><td>4</td><td>高一（1）班</td><td>102分</td><td>黄老师</td><td><a class="but toinfo">详情</a></td></tr>
+                        <tr><td>5</td><td>高一（1）班</td><td>102分</td><td>黄老师</td><td><a class="but toinfo">详情</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ss-page drom-tj" pageid="drom-tj">
+                <table class="ss-table">
+                    <thead><tr><th>排名</th><th>宿舍楼</th><th>宿舍号</th><th>得分</th><th width="20%">详情</th></tr></thead>
+                    <tbody class="ss-drom-tbody">
+                        <tr><td>1</td><td>男生宿舍1</td><td>1-301</td><td>102分</td><td><a class="but toinfo">详情</a></td></tr>
+                        <tr><td>2</td><td>男生宿舍2</td><td>2-302</td><td>102分</td><td><a class="but toinfo">详情</a></td></tr>
+                        <tr><td>3</td><td>男生宿舍3</td><td>3-303</td><td>100分</td><td></td></tr>
+                        <tr><td>4</td><td>男生宿舍4</td><td>3-303</td><td>98分</td><td><a class="but toinfo">详情</a></td></tr>
+                        <tr><td>5</td><td>男生宿舍5</td><td>4-201</td><td>96分</td><td><a class="but toinfo">详情</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="yc" id="huancun2">
+            <div class="nodata">
+                <i class="qkyicon">&#xe657;</i>
+                <span>暂未统计数据</span>
+            </div>
+        </div>   
+    </div>
+
+    <div class="qkyh5_footbg">
+        <div class="qkyh5_barnav ub ub-ac">
+            <a class="ub-f1 cur" href="index.html"><i class="qkyicon mr4 fz_20">&#xe6c9;</i>评比</a>
+            <a class="ub-f1 " href="index_xc.html"><i class="qkyicon mr4 fz_20">&#xe6ac;</i>巡查</a>
+            <a class="ub-f1" href="index_zs.html"><i class="qkyicon mr4 fz_20">&#xe756;</i>住宿</a>
+        </div>
+    </div>
+    <div class="popup-mask"></div>
+    <div class="popup trn" id="tips1">
+            <div class="popup-page">  
+                <div class="popup-page-title">说明</div>
+                <div class="popup-page-main">
+                    <div class="t_c lh"> 关小女:没叠被子</div>
+                    <div class="t_c lh"> 关小女:没叠被子</div>
+                </div>
+                <div class="popup-page-buts ub ub-ac">
+                    <a  class="ub-f1">确定</a>
+                    <a  class="ub-f1 popup-close">取消</a>
+                </div>
+            </div>
+        </div>
+
+    <script src="js/sea.js"></script>
+    <script src="js/seaconfig2.0.js"></script>
+    <script>
+        seajs.use(["jq", "run"], function (j, r) {
+           r.index(); 
+        });
+    </script>
+</body>
+
+</html>

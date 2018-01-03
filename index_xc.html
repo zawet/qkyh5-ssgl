@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>宿舍管理</title>
+    <link href="css/HFive.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper-3.3.1.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/ssgl.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="qkybody">
+    <!--头部标准，一般固定-->
+    <div class="qkyh5_header noshadow ub ub-ac ba_fa heard_ pt10 pb10">
+        <!-- <div class="date-but left ml5"><i class="qkyicon">&#xe67e;</i></div> -->
+        <div class="ub-f1 ml10"><div class="selectbox" id="ss-ssl"><select class="select"></select></div></div>
+        <div class="ub-f1 ml10"><div class="selectbox" id="ss-lc"><select class="select"></select></div></div>
+        <div class="ub-f1 ml10 mr10"><div class="selectbox" id="ss-ssh"><select class="select"></select></div></div>
+        <!-- <div class="date-but right mr5"><i class="qkyicon">&#xe67d;</i></div>  -->
+    </div>
+
+    <!--中部标准，一般放列表-->
+    <div class="qkyh5_main pt50 ">
+        <form action="" class="ss-form mt10">
+            <div class="ss-formli ub ub-ac">
+                <div class="ss-formtxt">当前日期：</div>
+                <div class="ss-formcont ub-f1"><span>2017-12-12</span></div>
+            </div>
+            <div class="ss-formli ub ub-ac">
+                <div class="ss-formtxt">学生姓名：</div>
+                <div class="ss-formcont ub-f1 selectbox" id="ss-stuname"><select class="select"><option value="">床号/姓名</option></select></div>
+            </div>
+            <div class="ss-formli ub ub-ac">
+                <div class="ss-formtxt">班级信息：</div>
+                <div class="ss-formcont ub-f1"><span>初一（1）班</span></div>
+            </div>
+            <div class="ss-formli ub ub-ac">
+                <div class="ss-formtxt">奖惩分值：</div>
+                <div class="ss-formcont ub-f1" >
+                    <div class="ub ub-ac">
+                        <div style="width:60px;">
+                            <div class="selectbox" id="ss-fz"><select class="select"><option value="">扣分</option><option value="">加分</option></select></div>
+                        </div>
+                        <div class="ub-f2 ml5"><input type="text" value="1" /></div>
+                    </div>  
+                </div> 
+            </div>
+            <div class="ss-formli ub ub-ac">
+                <div class="ss-formtxt">奖惩原因：</div>
+                <div class="ub-f1"><input type="text" placeholder="可手工输入"  id="jftxt" /></div>
+            </div>
+            <div class="ss-formli ub ub-ac">
+                <div class="ss-formtxt">备注：</div>
+                <div class="ub-f1"> <textarea id="ss-bz" cols="30" rows="4"></textarea></div>
+            </div>
+
+            <a href="" class="but active big t_c mt10">保存并继续</a>
+        </form>
+        
+        
+    </div>
+
+    <div class="qkyh5_footbg">
+        <div class="qkyh5_barnav ub ub-ac">
+            <a class="ub-f1 " href="index.html"><i class="qkyicon mr4 fz_20">&#xe6c9;</i>评比</a>
+            <a class="ub-f1 cur" href="index_xc.html"><i class="qkyicon mr4 fz_20">&#xe6ac;</i>巡查</a>
+            <a class="ub-f1" href="index_zs.html"><i class="qkyicon mr4 fz_20">&#xe756;</i>住宿</a>
+        </div>
+    </div>
+
+    <div class="popup trn all" id="jctxtChoose">
+            <div class="popup-page">  
+                <div class="popup-page-main">
+                    <div class="ss-formli ub ub-ac">
+                         <div class="ss-formtxt">奖惩原因：</div>
+                         <div class="ub-f1"><input type="text" placeholder="可手工输入"  id="jftxt_hc" /></div>
+                    </div>
+                    <div class="ss-choose-box">
+                        <a isc="no">原因1</a><a isc="no">原因2</a><a isc="no">原因3</a>
+                    </div>
+                </div>
+                <div class="popup-page-buts ub ub-ac">
+                    <a  class="ub-f1" id="chooseOk">确定</a>
+                    <a  class="ub-f1 popup-close">取消</a>
+                </div>
+            </div>
+        </div>
+
+    <script src="js/sea.js"></script>
+    <script src="js/seaconfig2.0.js"></script>
+    <script>
+        seajs.use(["jq", "run"], function (j, r) {
+           r.xc(); 
+        });
+    </script>
+</body>
+
+</html>

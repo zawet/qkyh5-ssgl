@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+.qkybody{ overflow-x: inherit; }
+.date-but{ width: 30px; text-align: center; line-height: 30px; height: 30px; background: #f5f5f5; color: #04acf7;border: 1px solid #eee;}
+.date-but.left{border-radius: 4px 0 0 4px;}
+.date-but.right{border-radius: 0 4px  4px 0;}
+.qkyh5_header .date-but{ border: none; background: #04acf7; color: #fff;}
+.qkyh5_header .selectbox{ background:#f2f6f8; border-radius: 0;}
+.qkyh5_header .selectbox select{ color: #04acf7;}
+.qkyh5_header .selectbox::after{ color: #04acf7;}
+#shaixuan{ color: #04acf7;}
+
+.but-bar{ width: 96%; margin: 10px auto 0;}
+.but{ padding:0 10px;  height: 30px; line-height: 30px; font-size: 14px; color: #535353;
+    border-radius: 4px; background: #fff; display: block; box-sizing: border-box; border: 1px solid #d8d8df;}
+    .but.big{ padding:2px 0;font-size: 16px; height: auto;}
+.but:hover{  color: #079adf; border-color: #079adf;}
+.but.active{ background: #04acf7; color: #fff; border-color: #079adf;}
+.but-bar .but.lt{ text-align: center; border-radius: 0;}
+.but-bar .but.lt:nth-child(1){border-radius: 4px 0 0 4px;}
+.but-bar .but.lt:nth-last-child(1){border-radius:0 4px 4px 0; border-left:0;}
+
+.sel-bar{ display: none; width: 96%; margin: 0 auto; background: #fff; padding:10px; box-sizing: border-box; box-shadow: 0 2px 3px #dfdfd8;border-radius: 0 0 4px 4px;}
+
+.ss-pages{ position: relative; width: 100%;}
+.ss-pagesli{ position: absolute;left: 100%; opacity: 0;top: 0; width: 100%; z-index: 66;}
+.ss-pagesli.rightyc{ left: auto; right: 100%;}
+.ss-pagesli{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}
+.ss-pagesli.open{ left: 0; opacity:1; right: 0; z-index: 77;}
+.ss-page{ width: 96%; margin: 10px auto;box-sizing: border-box; padding:10px;background: #fff;box-shadow: 0 2px 3px #dfdfd8; border-radius: 4px; display:none; }
+.ss-page.open{ display: block;}
+.ss-table{width: 100%;border: 1px solid #dfdfdf;border-spacing: 0;border-collapse: collapse;}
+.ss-table th{ background: #f5f5f5; padding: 5px 0; font-size:14px; color: #535353;border: 1px solid #dfdfdf;}
+.ss-table td{ padding: 8px 0; text-align: center;border-bottom: 1px solid #dfdfdf;border-left: 1px solid #dfdfdf;}
+.ss-table td .but{ padding: 2px 5px; display: inline-block; height: auto; line-height: normal;}
+.ss-table tbody tr:nth-child(1) td:nth-child(1){ font-size: 20px; color: #f0a314;} 
+.ss-table tbody tr:nth-child(2) td:nth-child(1){ font-size: 18px; color: #1cd4cb;} 
+.ss-table tbody tr:nth-child(3) td:nth-child(1){ font-size: 16px; color: #52a9f0;} 
+
+.ss-form{ width: 96%; margin: 0 auto; display: block; box-shadow: 0 2px 3px #dfdfd8; border-radius: 4px; padding:0 10px 10px; box-sizing: border-box; background: #fff; }
+
+.ss-formli{width:100%; border-bottom:1px dashed #e2e6e8; color: #636363; padding: 10px; box-sizing: border-box; }
+.ss-formtxt{ text-align: right; padding-right:10px; width: 80px; line-height: 30px; height: 30px; color: #333; }
+.ss-formli input{  width: 100%; font-size: 14px; line-height: 30px; background: #f2f6f8; border-radius: 4px;
+     display: block;box-sizing: border-box; padding: 0 10px;}
+.ss-formli textarea{  width: 100%;  font-size: 14px; line-height:22px; background: #f2f6f8; border-radius: 4px;
+    display: block;box-sizing: border-box; padding:5px 10px;}
+.ss-formli .selectbox{ background: #f2f6f8;}
+
+
+.ss-zslist{ width: 94%; margin: 10px auto; background: #fff; border-radius: 4px;  box-shadow: 0 2px 3px #dfdfd8}
+.ss-zsinfo{ background: #f2f6f8; border-radius: 4px 4px 0 0; padding:10px; font-size: 16px; color:#04acf7;  border-bottom: 1px solid #fff;}
+.ss-stulist{ padding: 10px; border-bottom: 1px dashed #eee;}
+.ss-stulist:nth-last-child(1){ border-bottom: none;}
+.ss-stuimg{ width:60px; height: 60px; background: #f1f1f1; overflow: hidden; border-radius: 50%; border: 3px solid #e1e1e1;}
+.ss-stuimg img{ width: 100%;}
+.ss-stubed{ text-align: center;color: #f0a314; padding: 0 10px;}
+.ss-stubed i{ font-size: 30px; }
+.ss-stuinfo{ font-size: 15px; color: #535353; text-align: center; line-height: 30px;}
+.ss-stuinfo label{font-size: 16px; color: #333; margin-right:10px;}
+
+.nodata{ width: 96%; margin: 10px auto; border-radius: 4px; padding:20% 0; text-align: center; background: #f9f9f9; box-sizing: border-box; color: #737373;box-shadow: 0 2px 3px #dfdfd8}
+.nodata i{ display: block; text-align: center; font-size: 40px; margin-bottom:10px;}
+.nodata span{ line-height: 26px;}
+
+
+.popup{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index:999999; overflow-y:auto;top:-100%; opacity: 0;}
+.popup.left{top:0; left: 100%;}
+.popup.open{top:0;left: 0; opacity: 1;}
+.popup-mask{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index:999998; background: rgba(0,0,0,0.4);display: none; }
+.popup-page{ position: absolute; top: 10%; left: 10%; width: 80%; background: #fff; z-index: 9999999; border-radius: 6px; box-shadow:0 2px 3px #999; margin-bottom: 20px;  }
+.popup.left .popup-page{ top: 0; width: 80%; left:auto; right: 0; margin-bottom: 0; min-height: 100%; border-radius: 0; box-sizing: border-box; padding-bottom:40px; top:0;}
+.popup-page-title{ padding:8px 10px; border-bottom: 1px solid #eee; font-size: 16px; text-align: center; background: #f5f5f5; border-radius: 6px 6px 0 0; }
+.popup-page-main{ padding: 10px;}
+.popup-page-buts{ width: 100%;  border-top: 1px solid #eee; border-radius: 0 0 6px 6px;}
+.popup-page-buts a{ display: block; padding: 10px 0; text-align: center; border-left:1px solid #eee; color: #737373; }
+.popup-page-buts a:nth-child(1){ border-left: none; color: #04acf7;}
+.popup.all{ overflow: hidden;}
+.popup.all .popup-page{top: 0; left:0 ; width: 100%; height: 100%; position: absolute;border-radius: 0; background: rgba(255,255,255,0.8)}
+.popup.all .popup-page-main{ padding: 0;}
+.popup.all .popup-page-main .ss-formli{ background: #fff;}
+.popup.all .popup-page-buts{ position: absolute; bottom: 0; left: 0; z-index: 33; border-radius: 0; background: #fff;}
+
+.ss-choose-box{ padding: 10px;}
+.ss-choose-box a{ padding: 5px 10px; background: #fff; border-radius: 4px; display: inline-block; margin:5px; color: #535353; border: 1px solid #dfdfd8;}
+.ss-choose-box a.active{ background: #04acf7; color: #fff; border-color: #079adf}
+
+
+
